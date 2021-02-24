@@ -1,11 +1,26 @@
-<div>
-<form>
+<div class="container-fluid">
+<form >
+
+<div class="form-group">
 <label for="skillInput" class="form-label">Skill:</label>
 <input style=" margin: 4px;" type="text" class="form-control" id="skillInput" aria-describedby="skillInput" name="skillInput">
+</div>
+
+<div class="form-group">
+  <label for="skillComment" class="form-label">Comment:</label>
+  <textarea style=" margin: 4px;" type="text" class="form-control" id="skillComment" aria-describedby="skillComment" name="skillComment">
+   </textarea>
+  </div>
+
+  
+<div class="form-check">
+  <input style=" margin: 4px;" type="checkbox" class="form-check-input" id="gotInput" aria-describedby="gotInput" name="gotInput" value="yes">
+  <label for="gotInput" class="form-label">I already know this!</label>
+  </div>
 
 
-<button type="button" class="btn btn-primary"  style=" margin: 2px;">I have it!</button>
-<button type="button" class="btn btn-primary" style=" margin: 2px;">I want it!</button>
+<button type="submit" class="btn btn-primary"  style=" margin: 2px;">Add it!</button>
+
 
 </form>
 </div>

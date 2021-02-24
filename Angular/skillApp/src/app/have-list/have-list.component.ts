@@ -9,9 +9,6 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class HaveListComponent implements OnInit {
 
-  //public skills = ["running","drawing","cooking"];
-
-
   @Input() public skills: any;
 
   constructor() { }

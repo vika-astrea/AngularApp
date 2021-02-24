@@ -9,7 +9,7 @@
   <tbody>
     <div *ngFor="let skill of skills; index as i">
       <tr>
-        <td scope="row">{{skill}}</td>
+        <td scope="row">{{skill | titlecase }}</td>
       </tr>
     </div>
   </tbody>
