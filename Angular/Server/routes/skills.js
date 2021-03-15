@@ -12,4 +12,25 @@ router.get('/', async function(req, res, next) {
   }
 });
 
+router.get('/accomplished', async function(req, res, next) {
+  try {
+    res.json(await skills.getAccomplished(req.query.page));
+  } catch (err) {
+    console.error(`Error while getting your skills `, err.message);
+    next(err);
+  }
+});
+
+router.get('/need', async function(req, res, next) {
+  try {
+    res.json(await skills.getNeed(req.query.page));
+  } catch (err) {
+    console.error(`Error while getting your skills `, err.message);
+    next(err);
+  }
+});
+
+
+
+
 module.exports = router;

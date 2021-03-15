@@ -1,6 +1,7 @@
 export interface SkillData{
-  userId:number,
   id:number,
-  title:string
+  name:string,
+  comment:string,
+  accomplished:number
 
 }
