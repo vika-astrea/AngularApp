@@ -30,7 +30,15 @@ router.get('/need', async function(req, res, next) {
   }
 });
 
-
+/* POST  */
+router.post('/post', async function(req, res, next) {
+  try {
+    res.json(await skills.create(req.body));
+  } catch (err) {
+    console.error(`Error while creating skill`, err.message);
+    next(err);
+  }
+});
 
 
 module.exports = router;

@@ -35,7 +35,27 @@ async function getNeed(){
   return data 
 }
 
+async function create(skill){
+  const result = await db.query(
+    `INSERT INTO skills 
+    (name, comment,accomplished) 
+    VALUES 
+    (?, ?, ?)`, 
+    [
+      skill.name, skill.comment, skill.accomplished
+    ]
+  );
+
+  let message = 'Error in creating skill';
+
+  if (result.affectedRows) {
+    message = 'skill created successfully';
+  }
+
+  return {message};
+}
+
 
 module.exports = {
-  getMultiple, getAccomplished, getNeed
+  getMultiple, getAccomplished, getNeed, create
 }
