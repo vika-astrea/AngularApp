@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import {SkillsService} from '../skills.service'
 @Component({
   selector: 'app-have-list',
   templateUrl: './have-list.component.html',
@@ -9,11 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class HaveListComponent implements OnInit {
 
-  @Input() public skills: any;
+ public skills : any = []
 
-  constructor() { }
+  constructor(private _skillsService:SkillsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._skillsService.getSkillsHave().subscribe(data=>this.skills = data)
   }
 
 }

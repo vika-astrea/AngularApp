@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'skillApp';
 
-  public haveSkills = ["running","drawing","cooking"];
+  
 
 }

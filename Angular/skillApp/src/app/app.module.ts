@@ -9,6 +9,7 @@ import { NeedListComponent } from './need-list/need-list.component';
 import { FormsModule } from '@angular/forms';
 import { SkillsService } from './skills.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HaveListComponent,
     NeedListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [SkillsService],
   bootstrap: [AppComponent],
 })

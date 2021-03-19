@@ -42,7 +42,7 @@ async function create(skill){
     VALUES 
     (?, ?, ?)`, 
     [
-      skill.name, skill.comment, skill.accomplished
+      skill.name, skill.comment, (skill.accomplished ? 1 : 0)
     ]
   );
 

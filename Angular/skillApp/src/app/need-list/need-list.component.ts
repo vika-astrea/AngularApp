@@ -13,7 +13,7 @@ export class NeedListComponent implements OnInit {
   constructor(private _skillsService: SkillsService) { }
 
   ngOnInit() {
-    this._skillsService.getSkills().subscribe(data=>this.skills = data)
+    this._skillsService.getSkillsNeed().subscribe(data=>this.skills = data)
   }
 
 

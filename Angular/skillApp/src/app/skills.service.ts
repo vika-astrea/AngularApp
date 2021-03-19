@@ -9,8 +9,12 @@ export class SkillsService {
 
   constructor(private http: HttpClient) { }
 
-  getSkills(): Observable<SkillData[]>{
+  getSkillsNeed(): Observable<SkillData[]>{
     return this.http.get<SkillData[]>('http://localhost:3000/skills/need');
+  }
+
+  getSkillsHave(): Observable<SkillData[]>{
+    return this.http.get<SkillData[]>('http://localhost:3000/skills/accomplished');
   }
 }
 

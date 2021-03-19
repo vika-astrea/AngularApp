@@ -1,25 +1,25 @@
 <div class="container-fluid">
-<form >
+<form [formGroup]="skillForm" (ngSubmit)="onSubmit()">
 
 <div class="form-group">
 <label for="skillInput" class="form-label">Skill:</label>
-<input style=" margin: 4px;" type="text" class="form-control" id="skillInput" aria-describedby="skillInput" name="skillInput">
+<input placeholder="skill" style=" margin: 4px;" type="text" class="form-control" id="skillInput" aria-describedby="skillInput" value="skill" name="skillInput" formControlName="name">
 </div>
 
 <div class="form-group">
   <label for="skillComment" class="form-label">Comment:</label>
-  <textarea style=" margin: 4px;" type="text" class="form-control" id="skillComment" aria-describedby="skillComment" name="skillComment">
+  <textarea placeholder="tell us about it" style=" margin: 4px;" type="text" class="form-control" id="skillComment" aria-describedby="skillComment" name="skillComment" formControlName="comment">
    </textarea>
   </div>
 
   
-<div class="form-check">
-  <input style=" margin: 4px;" type="checkbox" class="form-check-input" id="gotInput" aria-describedby="gotInput" name="gotInput" value="yes">
+ <div class="form-check">
+  <input style=" margin: 4px;" type="checkbox" class="form-check-input" id="gotInput" aria-describedby="gotInput" name="gotInput" value="yes" formControlName="accomplished">
   <label for="gotInput" class="form-label">I already know this!</label>
-  </div>
+  </div> 
 
 
-<button type="submit" class="btn btn-primary"  style=" margin: 2px;">Add it!</button>
+<button type="submit" class="btn btn-primary"  style=" margin: 2px;" type="submit">Add it!</button>
 
 
 </form>
